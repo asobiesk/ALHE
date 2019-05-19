@@ -120,8 +120,13 @@
     <ClCompile Include="Population.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algorithms.h" />
     <ClInclude Include="Chromosome.h" />
+    <ClInclude Include="Nagłówek.h" />
     <ClInclude Include="Population.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ALHE_Project.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -14,5 +14,7 @@ public:
 	int calculateCost(int aValue);
 	void print();
 	void test();
+	void init();
+	void set(int);
 };
 

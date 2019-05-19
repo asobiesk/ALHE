@@ -11,6 +11,27 @@ Chromosome::Chromosome()
 {		
 }
 
+Chromosome::~Chromosome()
+{
+}
+
+void Chromosome::init() 
+{
+	for(int i = 0; i < 10; ++i)
+		chrom.push_back(false);
+}
+
+void Chromosome::set(int a) 
+{
+	size_t i = 0;
+	while (a > 0)
+	{
+		chrom[i] = a % 2 == 0;
+		++i;
+		a /= 2;
+	}
+}
+
 void Chromosome::generateRandom()
 {
 	srand(time(0));
@@ -48,9 +69,4 @@ void Chromosome::print()
 	for (bool i : chrom)
 		std::cout << i << " ";
 	std::cout << std::endl;
-}
-
-
-Chromosome::~Chromosome()
-{
 }
