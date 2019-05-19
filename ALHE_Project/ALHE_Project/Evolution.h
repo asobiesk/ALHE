@@ -1,6 +1,6 @@
 #pragma once
 #include "Population.h"
-#define STEPSLIMIT 2000
+#define STEPSLIMIT 100
 class Evolution
 {
 private: 

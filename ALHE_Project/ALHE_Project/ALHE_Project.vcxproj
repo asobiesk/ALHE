@@ -116,12 +116,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Chromosome.cpp" />
+    <ClCompile Include="Evolution.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Population.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithms.h" />
     <ClInclude Include="Chromosome.h" />
+    <ClInclude Include="Evolution.h" />
     <ClInclude Include="Nagłówek.h" />
     <ClInclude Include="Population.h" />
   </ItemGroup>
