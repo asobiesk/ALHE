@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 
+
 //Konwencja: true: pierwsza kupka (A), false: druga kupka(B)
 class Chromosome
 {
