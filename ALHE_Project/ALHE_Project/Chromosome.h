@@ -16,6 +16,8 @@ public:
 	int calculateCost(int aValue) const;
 	void print();
 	void test();
+	void init();
+	void set(int);
 	bool operator<(const Chromosome &c2);
 };
 
