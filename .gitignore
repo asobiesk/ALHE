@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+/Debug
+
+/ALHE_Project/ALHE_Project/Debug
+*.suo
+*.db
+*.ipch
+/ALHE_Project/ALHE_Project/ALHE_Project.vcxproj
+/ALHE_Project/ALHE_Project/ALHE_Project.vcxproj.filters
+/ALHE_Project/ALHE_Project/ALHE_Project.vcxproj.user
+/ALHE_Project/Debug/ALHE_Project.ilk
+/ALHE_Project/Debug/ALHE_Project.pdb
