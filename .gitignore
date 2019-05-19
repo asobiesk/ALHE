@@ -37,8 +37,6 @@
 *.suo
 *.db
 *.ipch
-/ALHE_Project/ALHE_Project/ALHE_Project.vcxproj
-/ALHE_Project/ALHE_Project/ALHE_Project.vcxproj.filters
-/ALHE_Project/ALHE_Project/ALHE_Project.vcxproj.user
 /ALHE_Project/Debug/ALHE_Project.ilk
 /ALHE_Project/Debug/ALHE_Project.pdb
+/ALHE_Project/.vs/ALHE_Project/v15/Browse.VC.opendb
