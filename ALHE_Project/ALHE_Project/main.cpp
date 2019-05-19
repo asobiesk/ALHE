@@ -1,9 +1,10 @@
 #include <iostream>
-#include "Chromosome.h"
+#include <vector>
+#include "Evolution.h"
 
 int main()
 {
-	Chromosome c;
-	c.test();
+	Evolution evolution(20);
+	evolution.startAlgorithmDebug();
 	getchar();
 }

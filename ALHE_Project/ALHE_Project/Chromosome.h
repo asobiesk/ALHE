@@ -7,12 +7,15 @@ class Chromosome
 {
 
 public:
+	int aValue = 35;
 	std::vector<bool> chrom;
-	Chromosome();
+	Chromosome() {}
+	Chromosome(int value);
 	~Chromosome();
 	void generateRandom();
-	int calculateCost(int aValue);
+	int calculateCost(int aValue) const;
 	void print();
 	void test();
+	bool operator<(const Chromosome &c2);
 };
 

@@ -15,11 +15,16 @@ private:
 	int aValue = 35;
 
 public:
-	Population();
+	Population() {}
+	Population(int value);
 	~Population();
 	void generateStartPopulation();
 	void cross();
 	void mutate();
+	bool stopCond();
+	void print();
+	void shufflePopulation();
+	Chromosome getBest() { return best; }
 	Chromosome chooseBest();
 
 };

@@ -7,13 +7,13 @@
 //Konwencja: true: pierwsza kupka (A), false: druga kupka(B)
 
 
-Chromosome::Chromosome()
+Chromosome::Chromosome(int value)
 {		
+	aValue = value;
 }
 
 void Chromosome::generateRandom()
 {
-	srand(time(0));
 
 	for (int i = 0; i < 10; ++i)
 	{
@@ -23,7 +23,7 @@ void Chromosome::generateRandom()
 	}
 }
 
-int Chromosome::calculateCost(int aValue)
+int Chromosome::calculateCost(int aValue) const
 {
 	int aSum = 0;
 
@@ -39,12 +39,16 @@ void Chromosome::test()
 {
 	generateRandom();
 	print();
-	std::cout << "Cost: " << calculateCost(35) << std::endl;
+	std::cout << "Cost: " << calculateCost(aValue) << std::endl;
+}
+
+bool Chromosome::operator<(const Chromosome & c2)
+{
+	return (calculateCost(aValue) < c2.calculateCost(aValue));
 }
 
 void Chromosome::print()
 {
-	std::cout << "Vector: " << std::endl;
 	for (bool i : chrom)
 		std::cout << i << " ";
 	std::cout << std::endl;
