@@ -21,7 +21,6 @@ void Evolution::startAlgorithmDebug()
 	population.print();
 	while (!population.stopCond() && counter != STEPSLIMIT)
 	{
-		
 		population.cross();		
 		population.mutate();
 		population.chooseBest();	

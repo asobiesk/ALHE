@@ -9,15 +9,18 @@ class Chromosome
 public:
 	int aValue = 35;
 	std::vector<bool> chrom;
+
 	Chromosome() {}
 	Chromosome(int value);
 	~Chromosome();
 	void generateRandom();
 	int calculateCost(int aValue) const;
 	void print();
+	void printDivision();
 	void test();
 	void init();
 	void set(int);
 	bool operator<(const Chromosome &c2);
+	bool operator==(const Chromosome &other);
 };
 

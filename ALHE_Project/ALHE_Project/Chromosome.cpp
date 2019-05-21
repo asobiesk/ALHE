@@ -1,5 +1,5 @@
 #include "Chromosome.h"
-#include<cstdlib>
+#include <cstdlib>
 #include <ctime>
 #include <cmath>
 #include <iostream>
@@ -48,7 +48,7 @@ int Chromosome::calculateCost(int aValue) const
 {
 	int aSum = 0;
 
-	for (int i = 0; i < 10; ++i)
+	for (int i = 0; i < chrom.size(); ++i)
 	{
 		if (chrom[i])
 			aSum += (i + 1);		
@@ -73,4 +73,27 @@ void Chromosome::print()
 	for (bool i : chrom)
 		std::cout << i << " ";
 	std::cout << std::endl;
+}
+
+void Chromosome::printDivision()
+{
+	std::cout << "A: ";
+	for (int i=0; i<chrom.size(); ++i)
+		if (chrom[i])
+			std::cout << i+1 << " ";
+	std::cout << "\t\tB: ";
+	for (int i = 0; i < chrom.size(); ++i)
+		if (!chrom[i])
+			std::cout << i + 1 << " ";
+	std::cout << std::endl;
+}
+
+bool Chromosome::operator==(const Chromosome &other) 
+{
+	if (this->chrom.size() != other.chrom.size())
+		return false;
+	for (int i = 0; i < chrom.size(); ++i)
+		if (chrom[i] == other.chrom[i])
+			return false;
+	return true;
 }

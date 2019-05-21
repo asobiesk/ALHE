@@ -18,7 +18,10 @@ void Population::generateStartPopulation()
 	{
 		Chromosome newChrom(aValue);
 		newChrom.generateRandom();
-		population.push_back(newChrom);
+		//if (std::find(population.begin(), population.end(), newChrom) == population.end()) // nie wygeneruje populacji z dwoma identycznymi chromosomami
+			population.push_back(newChrom);
+		//else
+		//	--i;
 	}
 	chooseBest();
 }
@@ -73,7 +76,7 @@ void Population::cross()
 	
 	std::sort(newPop.begin(), newPop.end());
 
-	for (int i = 0; i < newPop.size() / 2; ++i)
+	for (int i = 0; i < MAXPOP-1; ++i)
 		newPop.pop_back();
 
 	population = newPop;
